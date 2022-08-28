@@ -1,0 +1,34 @@
+
+// use('mongodbVSCodePlaygroundDB');
+
+// show dbs;
+
+/* db.user.insertOne({
+  "name" : "Niharika",
+  "email" : "n@gmail.com",
+  "address" : "Laketown, Kolkata"
+});
+
+db.user.insertMany([
+  { "name" : "Newbie", "email" : "nb@gmail.com", "address" : "Nebula" },
+  { "name" : "Jackson", "email" : "j@gmail.com", "address" : "Australia" },
+  { "name" : "Melony", "email" : "m@gmail.com", "address" : "Switzerland" },
+]);
+ */
+
+// Find all documents
+ db.user.find({});   
+
+db.user.find({name : "Melony"});
+db.user.find({name : "Niharika" , email : "n@gmail.com"});
+
+//  db.collection.update( filter , action )
+db.user.update({name : "Jackson"} , {$set : {age : 26}} );
+
+// Update ALL documents
+db.user.updateMany({} , {$set : {age : 22}} );
+
+
+
+ 
+// db.sales.drop();
